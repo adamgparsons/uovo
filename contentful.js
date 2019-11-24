@@ -3,8 +3,9 @@ const environmentId = "master";
 const accessToken = "rayBcbZwy8tAT6CVX1D3mkkD6_05N3WHqM1VeEeDVJ4";
 const sectionTag = document.querySelector("section.grid");
 
-const url = `https://cdn.contentful.com/spaces/${spaceId}/environments/${environmentId}/entries?access_token=${accessToken}&order=fields.order&content_type=menuItem`;
+const url = `https://cors-anywhere.herokuapp.com/https://cdn.contentful.com/spaces/${spaceId}/environments/${environmentId}/entries?access_token=${accessToken}&order=-fields.order&content_type=menuItem`;
 
+console.log(url);
 const grabData = function() {
   return fetch(url)
     .then(response => response.json())
